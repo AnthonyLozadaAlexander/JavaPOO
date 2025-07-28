@@ -46,4 +46,16 @@ public class Car {
     public void color(){
         System.out.println("El color del coche es: " + color);
     }
+
+    public void modelo(){
+        System.out.println("El modelo del coche es: " + modelo);
+    }
+
+    public void marca(){
+        System.out.println("La marca del coche es: " + marca);
+    }
+
+    public void km(){
+        System.out.println("Los kilometros del coche son: " + km);
+    }
 }
