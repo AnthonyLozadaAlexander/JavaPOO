@@ -1,4 +1,4 @@
-﻿package ClassAndObjects;
+package ClassAndObjects;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class Car {
         car1.km = 0;
 
         do {
-            System.out.println("Atributos Del Coche: ");
+            System.out.println("Atributos Del Coche1 y Coche2: ");
             System.out.println("Digite 1 para ver el color del coche");
             System.out.println("Digite 2 para ver el modelo del coche");
             System.out.println("Digite 3 para ver la marca del coche");
@@ -29,11 +29,11 @@ public class Car {
             if (option == 1) {
                 car1.color();
             } else if (option == 2) {
-                System.out.println("El modelo del coche es: " + car1.modelo);
+                car1.modelo();
             } else if (option == 3) {
-                System.out.println("La marca del coche es: " + car1.marca);
+                car1.marca();
             } else if (option == 4) {
-                System.out.println("Los kilometros del coche son: " + car1.km);
+                car1.km();
             } else if (option == 5) {
                 System.out.println("Saliendo...");
             } else {
@@ -41,6 +41,7 @@ public class Car {
             }
         }while(option > 0 && option < 5);
 
+        input.close();
     }
 
     public void color(){
