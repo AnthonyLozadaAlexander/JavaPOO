@@ -10,12 +10,18 @@ public class Car {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Car car1 = new Car(); // creacion de objeto
         int option;
+        Car car1 = new Car(); // creacion de objeto
         car1.color = "Rojo";
         car1.modelo = "Mustang";
         car1.marca = "Toyota";
         car1.km = 0;
+
+        Car car2 = new Car();
+        car2.color = "Azul";
+        car2.modelo = "Civic";
+        car2.marca = "Honda";
+        car2.km = 10000;
 
         do {
             System.out.println("Atributos Del Coche1 y Coche2: ");
@@ -27,13 +33,17 @@ public class Car {
             option = input.nextInt();
 
             if (option == 1) {
-                car1.color();
+                car1.color(); // Llamada al metodo color del objeto car1
+                car2.color(); // Llamada al metodo color del objeto car2
             } else if (option == 2) {
-                car1.modelo();
+                car1.modelo(); // Llamada al metodo modelo del objeto car1
+                car2.modelo(); // Llamada al metodo modelo del objeto car2
             } else if (option == 3) {
-                car1.marca();
+                car1.marca(); // Llamada al metodo marca del objeto car1
+                car2.marca(); // Llamada al metodo marca del objeto car2
             } else if (option == 4) {
-                car1.km();
+                car1.km(); // Llamada al metodo km del objeto car1
+                car2.km(); // Llamada al metodo km del objeto car2
             } else if (option == 5) {
                 System.out.println("Saliendo...");
             } else {
