@@ -24,7 +24,7 @@ public class Car {
         car2.km = 10000;
 
         do {
-            System.out.println("----------------------------------------------------");
+            System.out.println("\n----------------------------------------------------");
             System.out.println("            Bienvenido Al Menu De Coches");
             System.out.println("----------------------------------------------------");
             System.out.println("Atributos Del Coche1 y Coche2: ");
@@ -48,7 +48,7 @@ public class Car {
                 car1.km(); // Llamada al metodo km del objeto car1
                 car2.km(); // Llamada al metodo km del objeto car2
             } else if (option == 5) {
-                System.out.println("----------------------------------------------------");
+                System.out.println("\n----------------------------------------------------");
                 System.out.println("            Gracias por usar el programa");
                 System.out.println("                      Saliendo...");
                 System.out.println("----------------------------------------------------");
