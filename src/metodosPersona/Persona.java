@@ -16,5 +16,9 @@ public class Persona {
         this.dni = dni;
     }
 
+    public void correr(){
+        System.out.println("Soy " + nombre + " tengo " + edad + " años y estoy corriendo una maraton");
+    }
+
 
 }
