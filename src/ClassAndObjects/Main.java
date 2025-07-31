@@ -2,7 +2,7 @@
 
 import javax.swing.*;
 
-public class MainOp {
+public class Main {
     public static void main(String[] args) {
         int num1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
         int num2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
