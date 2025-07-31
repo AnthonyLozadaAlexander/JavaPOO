@@ -1,5 +1,7 @@
 ﻿package ClassAndObjects;
 
+import javax.swing.*;
+
 public class Operacion {
     int suma, resta, multiplicacion, division; // atributos de la clase
 
@@ -20,7 +22,8 @@ public class Operacion {
         if (num2 != 0) {
             division = num1 / num2;
         } else {
-            System.out.println("Error: División por cero no permitida.");
+            JOptionPane.showMessageDialog(null, "Error: División por cero no permitida.");
+            // Aquí podrías asignar un valor por defecto a la división, como:
             division = 0; // o lanzar una excepción
         }
 
