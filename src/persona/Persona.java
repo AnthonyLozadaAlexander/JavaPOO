@@ -1,4 +1,4 @@
-﻿package persona;
+package persona;
 
 public class Persona {
 
@@ -11,7 +11,7 @@ public class Persona {
     }
 
     public void mostrarDatos() {
-        System.out.println("Nombre: " + nombre);
+        System.out.println("\nNombre: " + nombre);
         System.out.println("Edad: " + edad);
     }
 
