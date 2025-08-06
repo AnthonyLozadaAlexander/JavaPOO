@@ -7,7 +7,7 @@ public class Persona {
     String dni;
 
     // Métodos
-    public Persona(int edad, String nombre) {
+    public Persona(String nombre, int edad) {
         this.edad = edad;
         this.nombre = nombre;
     }
@@ -18,6 +18,10 @@ public class Persona {
 
     public void correr(){
         System.out.println("Soy " + nombre + " tengo " + edad + " años y estoy corriendo una maraton");
+    }
+
+    public void correr(int km){
+        System.out.println("He corrido " + km + " kilometros");
     }
 
 
