@@ -2,7 +2,7 @@ package ClassAndObjects;
 
 import java.util.Scanner;
 
-public class Car {
+public class Carro {
     String color;
     String modelo;
     String marca;
@@ -11,17 +11,17 @@ public class Car {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int option;
-        Car car1 = new Car(); // creacion de objeto
-        car1.color = "Rojo";
-        car1.modelo = "Mustang";
-        car1.marca = "Toyota";
-        car1.km = 0;
+        Carro carro1 = new Carro(); // creacion de objeto
+        carro1.color = "Rojo";
+        carro1.modelo = "Mustang";
+        carro1.marca = "Toyota";
+        carro1.km = 0;
 
-        Car car2 = new Car();
-        car2.color = "Azul";
-        car2.modelo = "Civic";
-        car2.marca = "Honda";
-        car2.km = 10000;
+        Carro carro2 = new Carro();
+        carro2.color = "Azul";
+        carro2.modelo = "Civic";
+        carro2.marca = "Honda";
+        carro2.km = 10000;
 
         do {
             System.out.println("\n----------------------------------------------------");
@@ -36,17 +36,17 @@ public class Car {
             option = input.nextInt();
 
             if (option == 1) {
-                car1.color(); // Llamada al metodo color del objeto car1
-                car2.color(); // Llamada al metodo color del objeto car2
+                carro1.color(); // Llamada al metodo color del objeto carro1
+                carro2.color(); // Llamada al metodo color del objeto carro2
             } else if (option == 2) {
-                car1.modelo(); // Llamada al metodo modelo del objeto car1
-                car2.modelo(); // Llamada al metodo modelo del objeto car2
+                carro1.modelo(); // Llamada al metodo modelo del objeto carro1
+                carro2.modelo(); // Llamada al metodo modelo del objeto carro2
             } else if (option == 3) {
-                car1.marca(); // Llamada al metodo marca del objeto car1
-                car2.marca(); // Llamada al metodo marca del objeto car2
+                carro1.marca(); // Llamada al metodo marca del objeto carro1
+                carro2.marca(); // Llamada al metodo marca del objeto carro2
             } else if (option == 4) {
-                car1.km(); // Llamada al metodo km del objeto car1
-                car2.km(); // Llamada al metodo km del objeto car2
+                carro1.km(); // Llamada al metodo km del objeto carro1
+                carro2.km(); // Llamada al metodo km del objeto carro2
             } else if (option == 5) {
                 System.out.println("\n----------------------------------------------------");
                 System.out.println("            Gracias por usar el programa");
