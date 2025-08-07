@@ -7,7 +7,11 @@ public class Main {
         Scanner input = new Scanner(System.in);
         String marca, modelo;
         double precio;
+        int numsVehiculos;
 
+        System.out.println("¿Cuántos vehículos desea ingresar?");
+        System.out.print("-> ");
+        numsVehiculos = input.nextInt();
 
     }
 }
