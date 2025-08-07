@@ -11,5 +11,11 @@ public class vehiculo {
         this.marca = marca;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
 
+    public String mostrarDatos(){
+        return "Marca: " + marca + " // Modelo: " + modelo + " // Precio: $" + String.format("%.2f", precio);
+    }
 }
