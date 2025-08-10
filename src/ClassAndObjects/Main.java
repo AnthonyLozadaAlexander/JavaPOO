@@ -1,4 +1,4 @@
-﻿package ClassAndObjects;
+package ClassAndObjects;
 
 import javax.swing.*;
 
