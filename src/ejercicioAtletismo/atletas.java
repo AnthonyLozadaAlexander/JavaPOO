@@ -16,6 +16,6 @@ public class atletas {
     }
 
     public String mostrarDatos(){
-        return "Codigo Atleta: " + codigoAtleta + " // Nombre Atleta: " + nombreAtleta + " // Tiempo Carrera: " + String.format("%.2f", tiempoCarrera) + " segundos.";
+        return "Codigo Atleta: " + codigoAtleta + ", Nombre Atleta: " + nombreAtleta + ", Tiempo Carrera: " + String.format("%.2f", tiempoCarrera) + " segundos.";
     }
 }
