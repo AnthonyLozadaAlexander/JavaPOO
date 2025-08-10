@@ -49,7 +49,7 @@ public class Main {
         }
 
         indiceCocheMasBarato = indiceCocheMasBarato(coches);
-        System.out.println("\nEl Coche mas barato es: \n" + coches[indiceCocheMasBarato] + "\n" +
+        System.out.println("\nEl Coche mas barato es: \n"  +
                 coches[indiceCocheMasBarato].mostrarDatos());
 
     }
