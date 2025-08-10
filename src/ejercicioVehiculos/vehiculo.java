@@ -13,7 +13,6 @@ public class vehiculo {
 
     public double getPrecio() {
         return precio;
-
     }
 
     public String mostrarDatos(){
