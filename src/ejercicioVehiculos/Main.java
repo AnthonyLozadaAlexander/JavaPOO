@@ -38,9 +38,9 @@ public class Main {
             // Pedimos las caracteristicas del vehiculo
             System.out.println("\nIngrese las caracteristicas del vehiculo[" + (i) + "]:");
             System.out.print("Introduzca Marca: ");
-            marca = input.next();
+            marca = input.nextLine();
             System.out.print("Introduzca Modelo: ");
-            modelo = input.next();
+            modelo = input.nextLine();
             System.out.print("Introduzca Precio: ");
             precio = input.nextDouble();
 
