@@ -19,6 +19,21 @@ public class Main {
         return indexMenorTiempo; // retorna el indice del atleta con el menor tiempo
     }
 
+    public static int indiceMayorTiempo(atletas[] atleta){
+        double tiempoMayor;
+        int indexMayorTiempo = 0;
+
+        tiempoMayor = atleta[0].getTiempoCarrera(); // se tomo el primer indice como el mayor tiempo
+        for (int i = 1; i < atleta.length ; i++) {
+            if(atleta[i].getTiempoCarrera() > tiempoMayor){
+                tiempoMayor = atleta[i].getTiempoCarrera();
+                indexMayorTiempo = i;
+            }
+        }
+
+        return indexMayorTiempo; // retorna el indice del atleta con el mayor tiempo
+    }
+
 // Clase principal para manejar la entrada de datos y la lógica del programa
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -43,6 +58,11 @@ public class Main {
             // tipo atletas con los argumentos ingresados por el usuario
         }
 
+        indexMenorTiempo = indiceMenorTiempo(atleta);
+        indexMayorTiempo = indiceMayorTiempo(atleta);
+
+        System.out.println("El atleta con el menor tiempo es: " + atleta[indexMenorTiempo].mostrarDatos());
+        System.out.println("El atleta con el mayor tiempo es: " + atleta[indexMayorTiempo].mostrarDatos());
 
     }
 }
