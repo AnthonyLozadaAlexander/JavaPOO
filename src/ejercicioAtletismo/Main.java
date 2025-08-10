@@ -22,7 +22,8 @@ public class Main {
             System.out.println("Ingrese el tiempo de carrera del atleta["+i+"]: ");
             tiempoCarrera = input.nextDouble();
 
-            atleta[i] = new atletas(codigoAtleta, nombreAtleta, tiempoCarrera);
+            atleta[i] = new atletas(codigoAtleta, nombreAtleta, tiempoCarrera); // Crear un nuevo objeto atleta del
+            // tipo atletas con los argumentos ingresados por el usuario
         }
 
 
