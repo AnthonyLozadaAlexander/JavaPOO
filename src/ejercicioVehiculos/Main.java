@@ -3,6 +3,7 @@ package ejercicioVehiculos;
 import java.util.Scanner;
 
 public class Main {
+
     public static int indiceCocheMasBarato(vehiculo coches[]){
         double precio;
         int indice = 0;
@@ -22,7 +23,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         String marca, modelo;
         double precio;
-        int numsVehiculos;
+        int numsVehiculos, indiceCocheMasBarato;
 
         System.out.println("¿Cuántos vehículos desea ingresar?");
         System.out.print("-> ");
@@ -42,8 +43,10 @@ public class Main {
 
             coches[i] = new vehiculo(precio, modelo, marca); // creacion del objeto vehiculo junto con sus
             // caracteristicas/atributos
-
         }
+
+        indiceCocheMasBarato = indiceCocheMasBarato(coches);
+        System.out.println("\nEl Coche mas barato es: \n" + coches[indiceCocheMasBarato].mostrarDatos());
 
     }
 }
