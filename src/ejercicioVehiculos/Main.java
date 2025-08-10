@@ -33,7 +33,10 @@ public class Main {
         vehiculo coches[] = new vehiculo[numsVehiculos];
 
         for (int i = 0; i < coches.length; i++) {
-            System.out.println("Digite las caracteristicas del vehiculo[" + (i) + "]:");
+            input.nextLine(); // Limpiar el buffer del scanner
+
+            // Pedimos las caracteristicas del vehiculo
+            System.out.println("\nIngrese las caracteristicas del vehiculo[" + (i) + "]:");
             System.out.print("Introduzca Marca: ");
             marca = input.next();
             System.out.print("Introduzca Modelo: ");
@@ -46,7 +49,8 @@ public class Main {
         }
 
         indiceCocheMasBarato = indiceCocheMasBarato(coches);
-        System.out.println("\nEl Coche mas barato es: \n" + coches[indiceCocheMasBarato].mostrarDatos());
+        System.out.println("\nEl Coche mas barato es: \n" + coches[indiceCocheMasBarato] + "\n" +
+                coches[indiceCocheMasBarato].mostrarDatos());
 
     }
 }
