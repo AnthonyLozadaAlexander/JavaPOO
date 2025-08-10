@@ -13,5 +13,8 @@ public class Main {
         System.out.print("-> ");
         numsVehiculos = input.nextInt();
 
+        // Creacion de objeto array de objetos vehiculo
+        vehiculo coches[] = new vehiculo[numsVehiculos];
+
     }
 }
