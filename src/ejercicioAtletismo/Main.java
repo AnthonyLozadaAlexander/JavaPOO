@@ -9,6 +9,10 @@ public class Main {
     double tiempoCarrera;
     int numsAtletas, indexMenorTiempo, indexMayorTiempo;
 
+        System.out.println("¿Cuantos atletas participarán en la carrera?");
+        numsAtletas = input.nextInt();
+        atletas atleta[] = new atletas[numsAtletas];
+
 
     }
 }
