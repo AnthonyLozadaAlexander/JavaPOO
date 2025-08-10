@@ -3,6 +3,23 @@ package ejercicioAtletismo;
 import java.util.Scanner;
 
 public class Main {
+
+    public static int indiceMenorTiempo(atletas[] atleta){
+        double tiempoMenor;
+        int indexMenorTiempo = 0;
+
+        tiempoMenor = atleta[0].getTiempoCarrera(); // se tomo el primer indice como el menor tiempo
+        for (int i = 1; i < atleta.length ; i++) {
+            if(atleta[i].getTiempoCarrera() < tiempoMenor){
+                tiempoMenor = atleta[i].getTiempoCarrera();
+                indexMenorTiempo = i;
+            }
+        }
+
+        return indexMenorTiempo; // retorna el indice del atleta con el menor tiempo
+    }
+
+// Clase principal para manejar la entrada de datos y la lógica del programa
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String codigoAtleta, nombreAtleta;
