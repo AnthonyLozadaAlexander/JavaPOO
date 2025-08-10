@@ -16,5 +16,17 @@ public class Main {
         // Creacion de objeto array de objetos vehiculo
         vehiculo coches[] = new vehiculo[numsVehiculos];
 
+        for (int i = 0; i < coches.length; i++) {
+            System.out.println("Digite las caracteristicas del vehiculo[" + (i) + "]:");
+            System.out.print("Introduzca Marca: ");
+            marca = input.next();
+            System.out.print("Introduzca Modelo: ");
+            modelo = input.next();
+            System.out.print("Introduzca Precio: ");
+            precio = input.nextDouble();
+
+
+        }
+
     }
 }
