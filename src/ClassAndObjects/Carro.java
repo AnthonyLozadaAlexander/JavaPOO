@@ -11,7 +11,7 @@ public class Carro {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int option;
-        Carro carro1 = new Carro(); // creacion de objeto
+        Carro carro1 = new Carro(); // creacion de Objeto
         carro1.color = "Rojo";
         carro1.modelo = "Mustang";
         carro1.marca = "Toyota";
@@ -36,17 +36,17 @@ public class Carro {
             option = input.nextInt();
 
             if (option == 1) {
-                carro1.color(); // Llamada al metodo color del objeto carro1
-                carro2.color(); // Llamada al metodo color del objeto carro2
+                carro1.color(); // Llamada al metodo color del Objeto carro1
+                carro2.color(); // Llamada al metodo color del Objeto carro2
             } else if (option == 2) {
-                carro1.modelo(); // Llamada al metodo modelo del objeto carro1
-                carro2.modelo(); // Llamada al metodo modelo del objeto carro2
+                carro1.modelo(); // Llamada al metodo modelo del Objeto carro1
+                carro2.modelo(); // Llamada al metodo modelo del Objeto carro2
             } else if (option == 3) {
-                carro1.marca(); // Llamada al metodo marca del objeto carro1
-                carro2.marca(); // Llamada al metodo marca del objeto carro2
+                carro1.marca(); // Llamada al metodo marca del Objeto carro1
+                carro2.marca(); // Llamada al metodo marca del Objeto carro2
             } else if (option == 4) {
-                carro1.km(); // Llamada al metodo km del objeto carro1
-                carro2.km(); // Llamada al metodo km del objeto carro2
+                carro1.km(); // Llamada al metodo km del Objeto carro1
+                carro2.km(); // Llamada al metodo km del Objeto carro2
             } else if (option == 5) {
                 System.out.println("\n----------------------------------------------------");
                 System.out.println("            Gracias por usar el programa");

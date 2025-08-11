@@ -8,9 +8,9 @@ public class Objeto {
     private int y;
 
     // Constructor para inicializar las coordenadas del Objeto
-    public Objeto(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public Objeto(int _x, int _y) {
+        this.x = _x;
+        this.y = _y;
     }
 
     // Método para mover el Objeto a nuevas coordenadas

@@ -29,7 +29,7 @@ public class Main {
         System.out.print("-> ");
         numsVehiculos = input.nextInt();
 
-        // Creacion de objeto array de objetos vehiculo
+        // Creacion de Objeto array de objetos vehiculo
         vehiculo coches[] = new vehiculo[numsVehiculos];
 
         for (int i = 0; i < coches.length; i++) {
@@ -44,7 +44,7 @@ public class Main {
             System.out.print("Introduzca Precio: ");
             precio = input.nextDouble();
 
-            coches[i] = new vehiculo(precio, modelo, marca); // creacion del objeto vehiculo junto con sus
+            coches[i] = new vehiculo(precio, modelo, marca); // creacion del Objeto vehiculo junto con sus
             // caracteristicas/atributos
         }
 
