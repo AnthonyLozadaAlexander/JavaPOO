@@ -10,4 +10,16 @@ public class Persona {
         this.apellido = _apellido;
         this.edad = _edad;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
 }
