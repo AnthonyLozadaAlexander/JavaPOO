@@ -13,7 +13,11 @@ public class Estudiante extends Persona {
     }
 
     public void mostrarDatos(){
-
+        System.out.println("Nombre: " + getNombre() + "\n" +
+                            "Apellido: " + getApellido() + "\n" +
+                            "Edad: " + getEdad() + "\n" +
+                            "Codigo Estudiante: " + codigoEstudiante + "\n" +
+                            "Nota Final: " + notaFinal);
     }
 
 }
