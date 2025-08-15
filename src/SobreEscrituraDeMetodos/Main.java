@@ -5,5 +5,8 @@ public class Main {
         Persona persona = new Persona();
         Perro perro = new Perro();
 
+        persona.comer();
+        perro.comer();
+
     }
 }
