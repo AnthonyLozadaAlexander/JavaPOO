@@ -5,4 +5,8 @@ public class Vehiculo {
     protected String matricula;
     protected String marca;
     protected String modelo;
+
+    public Vehiculo(String matricula, String marca, String modelo) {
+
+    }
 }
