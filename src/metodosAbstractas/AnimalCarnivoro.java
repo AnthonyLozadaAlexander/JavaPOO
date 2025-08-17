@@ -1,6 +1,6 @@
 package metodosAbstractas;
 
-public abstract class AnimalCarnivoro extends Animal {
+public class AnimalCarnivoro extends Animal {
 
     @Override
     public void alimentarse(){
