@@ -7,4 +7,6 @@ public class vehiculoTurismo extends Vehiculo {
         super(matricula, marca, modelo);
         this.nPuertas = nPuertas;
     }
+
+
 }
