@@ -25,6 +25,7 @@ public class Vehiculo {
     }
 
     public String mostrarDatos() {
-        return "Matrícula: " + matricula + ", Marca: " + marca + ", Modelo: " + modelo;
+        return "Caracteristicas Del Vehiculo: " + "\nMatrícula: " + matricula + "\nMarca: " + marca + "\nModelo: " +
+                modelo;
     }
 }
