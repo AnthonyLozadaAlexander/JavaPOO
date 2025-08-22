@@ -7,6 +7,8 @@ public class Vehiculo {
     protected String modelo;
 
     public Vehiculo(String matricula, String marca, String modelo) {
-
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
     }
 }
