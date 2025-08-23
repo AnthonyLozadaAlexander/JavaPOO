@@ -1,5 +1,6 @@
 package ejercicioPolimorfismo.Poli;
 
+// clase Padre
 public class Vehiculo {
 
     protected String matricula;
