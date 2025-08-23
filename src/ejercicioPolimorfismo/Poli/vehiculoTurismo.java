@@ -1,7 +1,7 @@
 package ejercicioPolimorfismo.Poli;
 
 public class vehiculoTurismo extends Vehiculo {
-    private int nPuertas;
+    private int nPuertas; // Número de puertas
 
     public vehiculoTurismo(String matricula, String marca, String modelo, int nPuertas) {
         super(matricula, marca, modelo);
