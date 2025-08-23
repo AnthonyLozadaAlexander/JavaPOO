@@ -8,6 +8,7 @@ public class vehiculoTurismo extends Vehiculo {
         this.nPuertas = nPuertas;
     }
 
+    // Getter para el número de puertas
     public int getnPuertas() {
         return nPuertas;
     }
