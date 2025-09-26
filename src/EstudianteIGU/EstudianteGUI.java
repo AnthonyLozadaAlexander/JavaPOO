@@ -32,6 +32,8 @@ public class EstudianteGUI extends JFrame {
         String carrera = txtCarrera.getText();
         double nota1 = Double.parseDouble(txtNota1.getText());
         double nota2 = Double.parseDouble(txtNota2.getText());
+
+        Estudiante E1 = new Estudiante();
     }
 
     public void limpiarTxT() {
