@@ -68,7 +68,9 @@ public class Estudiante {
     }
 
     public double calcularPromedio() {
-        return (nota1 + nota2) / 2;
+
+        double promedio = (nota1 + nota2) / 2;
+        return promedio;
     }
 
     public String mostrarDatos() {
