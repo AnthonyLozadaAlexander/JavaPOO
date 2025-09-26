@@ -47,6 +47,10 @@ public class Estudiante {
         this.nota2 = nota2;
     }
 
+    public double calcularPromedio() {
+        return (nota1 + nota2) / 2;
+    }
+
     public String mostrarDatos() {
         return "Nombre: " + nombre + "\n" +
                 "Edad: " + edad + "\n" +
