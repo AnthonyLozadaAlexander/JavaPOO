@@ -85,6 +85,7 @@ public class Estudiante {
     }
 
     public void Alerta() {
-        JOptionPane.showMessageDialog(null, "Estado: " + determinarEstado(), "Alerta", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, mostrarDatos(), "Informacion del Estudiante",
+                JOptionPane.INFORMATION_MESSAGE);
     }
 }
