@@ -36,7 +36,11 @@ public class Estudiante {
     }
 
     public void setNota1(double nota1) {
-        this.nota1 = nota1;
+        if (nota1 > 0 && nota1 <= 10) {
+            this.nota1 = nota1;
+        } else {
+            this.nota1 = 0;
+        }
     }
 
     public double getNota2() {
@@ -56,6 +60,7 @@ public class Estudiante {
                 "Edad: " + edad + "\n" +
                 "Carrera: " + carrera + "\n" +
                 "Nota 1: " + nota1 + "\n" +
-                "Nota 2: " + nota2 + "\n";
+                "Nota 2: " + nota2 + "\n" +
+                "Promedio: " + calcularPromedio() + "\n";
     }
 }
