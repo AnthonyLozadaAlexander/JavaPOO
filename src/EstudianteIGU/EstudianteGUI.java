@@ -34,6 +34,14 @@ public class EstudianteGUI extends JFrame {
         double nota2 = Double.parseDouble(txtNota2.getText());
 
         Estudiante E1 = new Estudiante();
+
+        E1.setNombre(nombre);
+        E1.setEdad(edad);
+        E1.setCarrera(carrera);
+        E1.setNota1(nota1);
+        E1.setNota2(nota2);
+
+        E1.Alerta();
     }
 
     public void limpiarTxT() {
