@@ -48,7 +48,12 @@ public class Estudiante {
     }
 
     public void setNota2(double nota2) {
-        this.nota2 = nota2;
+        if (nota2 > 0 && nota2 <= 10) {
+            this.nota2 = nota2;
+        } else {
+            this.nota2 = 0;
+        }
+
     }
 
     public double calcularPromedio() {
