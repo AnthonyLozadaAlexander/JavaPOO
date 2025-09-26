@@ -56,6 +56,17 @@ public class Estudiante {
 
     }
 
+    public String determinarEstado() {
+        double promedio = calcularPromedio();
+        if (promedio >= 7 && promedio <= 10) {
+            return "Aprobado";
+        } else if (promedio >= 5.5 && promedio < 7) {
+            return "Supletorio";
+        } else {
+            return "Reprobado";
+        }
+    }
+
     public double calcularPromedio() {
         return (nota1 + nota2) / 2;
     }
