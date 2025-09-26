@@ -1,5 +1,7 @@
 package EstudianteIGU;
 
+import javax.swing.*;
+
 public class Estudiante {
     private String nombre;
     private int edad;
@@ -68,17 +70,21 @@ public class Estudiante {
     }
 
     public double calcularPromedio() {
-
         double promedio = (nota1 + nota2) / 2;
         return promedio;
     }
 
     public String mostrarDatos() {
-        return "Nombre: " + nombre + "\n" +
+        return "nombre: " + nombre + "\n" +
                 "Edad: " + edad + "\n" +
                 "Carrera: " + carrera + "\n" +
                 "Nota 1: " + nota1 + "\n" +
                 "Nota 2: " + nota2 + "\n" +
-                "Promedio: " + calcularPromedio() + "\n";
+                "Promedio: " + calcularPromedio() + "\n" +
+                "Estado: " + determinarEstado() + "\n";
+    }
+
+    public void Alerta() {
+        JOptionPane.showMessageDialog(null, "Estado: " + determinarEstado(), "Alerta", JOptionPane.INFORMATION_MESSAGE);
     }
 }
