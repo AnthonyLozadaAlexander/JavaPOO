@@ -17,6 +17,11 @@ public class EstudianteGUI extends JFrame {
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
+            try {
+                UIManager.setLookAndFeel("com.formdev.flatlaf.FlatLightLaf");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             var frame = new EstudianteGUI();
             frame.setVisible(true);
         });
@@ -45,7 +50,6 @@ public class EstudianteGUI extends JFrame {
         E1.setNota2(nota2);
 
         txtResultados.append(E1.mostrarDatos() + "\n");
-
         E1.Alerta();
     }
 
@@ -64,7 +68,6 @@ public class EstudianteGUI extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - Anthony Lozada Alexander
-        label1 = new JLabel();
         label2 = new JLabel();
         label3 = new JLabel();
         label4 = new JLabel();
@@ -79,15 +82,12 @@ public class EstudianteGUI extends JFrame {
         scrollPane1 = new JScrollPane();
         txtResultados = new JTextArea();
         btnIngresar2 = new JButton();
+        panel2 = new JPanel();
+        label1 = new JLabel();
 
         //======== this ========
         setBackground(Color.white);
         var contentPane = getContentPane();
-
-        //---- label1 ----
-        label1.setText("Registro De Estudiantes");
-        label1.setForeground(Color.black);
-        label1.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 22));
 
         //---- label2 ----
         label2.setText("Nombre:");
@@ -149,57 +149,89 @@ public class EstudianteGUI extends JFrame {
 			btnLimpiar(e);
 		});
 
+        //======== panel2 ========
+        {
+            panel2.setBackground(new Color(0xccffcc));
+            panel2.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax . swing.
+            border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frm\u0044es\u0069gn\u0065r \u0045va\u006cua\u0074io\u006e" , javax. swing .border . TitledBorder. CENTER
+            ,javax . swing. border .TitledBorder . BOTTOM, new java. awt .Font ( "D\u0069al\u006fg", java .awt . Font
+            . BOLD ,12 ) ,java . awt. Color .red ) ,panel2. getBorder () ) ); panel2. addPropertyChangeListener(
+            new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e) { if( "\u0062or\u0064er"
+            .equals ( e. getPropertyName () ) )throw new RuntimeException( ) ;} } );
+
+            //---- label1 ----
+            label1.setText("Registro De Estudiantes");
+            label1.setForeground(Color.black);
+            label1.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 22));
+
+            GroupLayout panel2Layout = new GroupLayout(panel2);
+            panel2.setLayout(panel2Layout);
+            panel2Layout.setHorizontalGroup(
+                panel2Layout.createParallelGroup()
+                    .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
+                        .addContainerGap(264, Short.MAX_VALUE)
+                        .addComponent(label1, GroupLayout.PREFERRED_SIZE, 314, GroupLayout.PREFERRED_SIZE)
+                        .addGap(233, 233, 233))
+            );
+            panel2Layout.setVerticalGroup(
+                panel2Layout.createParallelGroup()
+                    .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
+                        .addContainerGap(41, Short.MAX_VALUE)
+                        .addComponent(label1)
+                        .addGap(32, 32, 32))
+            );
+        }
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(95, 95, 95)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(95, 95, 95)
+                            .addComponent(label2)
+                            .addGap(5, 5, 5)
+                            .addComponent(txtNombre, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addComponent(label3)
+                            .addGap(21, 21, 21)
+                            .addComponent(txtEdad, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addComponent(label4)
+                            .addGap(9, 9, 9)
+                            .addComponent(txtCarrera, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(label6)
+                            .addGap(9, 9, 9)
+                            .addComponent(txtNota2, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(label5)
+                            .addGap(12, 12, 12)
+                            .addComponent(txtNota1, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(65, 65, 65)
                             .addGroup(contentPaneLayout.createParallelGroup()
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label2)
-                                    .addGap(5, 5, 5)
-                                    .addComponent(txtNombre, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label3)
-                                    .addGap(21, 21, 21)
-                                    .addComponent(txtEdad, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label4)
-                                    .addGap(9, 9, 9)
-                                    .addComponent(txtCarrera, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(3, 3, 3)
-                                    .addComponent(label6)
-                                    .addGap(9, 9, 9)
-                                    .addComponent(txtNota2, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(3, 3, 3)
-                                    .addComponent(label5)
-                                    .addGap(12, 12, 12)
-                                    .addComponent(txtNota1, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(65, 65, 65)
-                                    .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                            .addGap(6, 6, 6)
-                                            .addComponent(btnIngresar2))
-                                        .addComponent(btnIngresar))))
-                            .addGap(54, 54, 54)
-                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 362, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(251, 251, 251)
-                            .addComponent(label1, GroupLayout.PREFERRED_SIZE, 314, GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(6, 6, 6)
+                                    .addComponent(btnIngresar2))
+                                .addComponent(btnIngresar))))
+                    .addGap(54, 54, 54)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 362, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(113, Short.MAX_VALUE))
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(panel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap())
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(42, 42, 42)
-                    .addComponent(label1)
-                    .addGap(58, 58, 58)
+                    .addGap(27, 27, 27)
+                    .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addGap(44, 44, 44)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGroup(contentPaneLayout.createParallelGroup()
@@ -236,7 +268,7 @@ public class EstudianteGUI extends JFrame {
                             .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(btnIngresar2))
                         .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(113, Short.MAX_VALUE))
+                    .addContainerGap(69, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -245,7 +277,6 @@ public class EstudianteGUI extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - Anthony Lozada Alexander
-    private JLabel label1;
     private JLabel label2;
     private JLabel label3;
     private JLabel label4;
@@ -260,5 +291,7 @@ public class EstudianteGUI extends JFrame {
     private JScrollPane scrollPane1;
     private JTextArea txtResultados;
     private JButton btnIngresar2;
+    private JPanel panel2;
+    private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
