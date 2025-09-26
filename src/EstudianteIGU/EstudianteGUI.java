@@ -27,9 +27,14 @@ public class EstudianteGUI extends JFrame {
     }
 
     private void btnIngresar(ActionEvent e) {
-
+        String nombre = txtNombre.getText();
+        int edad = Integer.parseInt(txtEdad.getText());
+        String carrera = txtCarrera.getText();
     }
 
+    public void limpiarTxT() {
+
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - Anthony Lozada Alexander
