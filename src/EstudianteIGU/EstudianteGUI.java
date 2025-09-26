@@ -24,6 +24,9 @@ public class EstudianteGUI extends JFrame {
 
     public EstudianteGUI() {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Registro De Estudiantes");
+        setResizable(false);
     }
 
     private void btnIngresar(ActionEvent e) {
