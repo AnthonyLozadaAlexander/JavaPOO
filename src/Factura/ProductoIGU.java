@@ -33,11 +33,19 @@ public class ProductoIGU extends JFrame {
         int cantidad = Integer.parseInt(txtCantidad.getText());
         double descuento = Double.parseDouble(txtDescuento.getText());
         double precioUnitario = Double.parseDouble(txtPrecioUnitario.getText());
+
         ProductoClass Producto = new ProductoClass();
         Producto.setProducto(producto);
         Producto.setCantidad(cantidad);
         Producto.setDescuento(descuento);
         Producto.setPrecioUnitario(precioUnitario);
+
+        Producto.calcularSubtotal();
+        Producto.calcularPorcentajeDescuento();
+        Producto.calcularIVA();
+        Producto.calcularTotal();
+
+        Producto.mensajeInformativo();
     }
 
     private void btnLimpiar(ActionEvent e) {
