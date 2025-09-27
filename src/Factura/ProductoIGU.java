@@ -47,6 +47,7 @@ public class ProductoIGU extends JFrame {
 
         DefaultTableModel model = (DefaultTableModel) tablaProductos.getModel(); // Obtener el modelo de la tabla
         Object[] rowData = {
+                // utilizamos los métodos get para obtener los valores
                 Producto.getProducto(),
                 Producto.getCantidad(),
                 Producto.getDescuento(),
@@ -55,11 +56,19 @@ public class ProductoIGU extends JFrame {
                 Producto.calcularIVA(),
                 Producto.calcularTotal()
         };
-        Producto.mensajeInformativo();
+        model.addRow(rowData); // Agregar la fila al modelo
+        txtResultados.setText(Producto.mostrarResultados());
+        Producto.mensajeInformativo(); // Mostrar el mensaje informativo
     }
 
     private void btnLimpiar(ActionEvent e) {
-
+        txtProducto.setText("");
+        txtCantidad.setText("");
+        txtDescuento.setText("");
+        txtPrecioUnitario.setText("");
+        txtResultados.setText("");
+        DefaultTableModel model = (DefaultTableModel) tablaProductos.getModel();
+        model.setRowCount(0); // Limpiar todas las filas de la tabla
     }
 
     private void initComponents() {
