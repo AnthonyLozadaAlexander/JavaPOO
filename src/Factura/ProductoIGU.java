@@ -62,14 +62,25 @@ public class ProductoIGU extends JFrame {
         Producto.mensajeInformativo(); // Mostrar el mensaje informativo
     }
 
-    private void btnLimpiar(ActionEvent e) {
+    private void LimpiarCampos() {
         txtProducto.setText("");
         txtCantidad.setText("");
         txtDescuento.setText("");
         txtPrecioUnitario.setText("");
         txtResultados.setText("");
+    }
+
+    private void limpiarTabla() {
         DefaultTableModel model = (DefaultTableModel) tablaProductos.getModel();
         model.setRowCount(0); // Limpiar todas las filas de la tabla
+    }
+    private void btnLimpiar(ActionEvent e) {
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Estás seguro de que deseas limpiar los datos?", "Confirmar", JOptionPane.YES_NO_OPTION);
+        if (opcion == JOptionPane.YES_OPTION) {
+            LimpiarCampos();
+        } else {
+            return;
+        }
     }
 
     private void initComponents() {
