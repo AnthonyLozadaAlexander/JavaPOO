@@ -26,11 +26,11 @@ public class ProductoIGU extends JFrame {
     }
 
     private void btnIngresar(ActionEvent e) {
-        // TODO add your code here
+
     }
 
     private void btnLimpiar(ActionEvent e) {
-        // TODO add your code here
+
     }
 
     private void initComponents() {
