@@ -46,4 +46,16 @@ public class ProductoClass {
         double total = (calcularSubtotal() - calcularPorcentajeDescuento()) + calcularIVA();
         return total;
     }
+
+
+    public String toString() {
+        return "ProductoClass{" +
+                "producto='" + producto + '\'' +
+                ", precioUnitario=" + precioUnitario +
+                ", cantidad=" + cantidad +
+                ", precioTotal=" + precioTotal +
+                ", descuento=" + descuento +
+                ", IVA=" + IVA +
+                '}';
+    }
 }
