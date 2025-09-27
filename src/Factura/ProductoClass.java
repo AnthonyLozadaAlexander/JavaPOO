@@ -64,7 +64,7 @@ public class ProductoClass {
         return total;
     }
 
-    public String mostrarInfo() {
+    public String mostrarResultados() {
         return "Producto: " + producto + "\n" +
                 "PrecioUnitario: " + precioUnitario + "\n" +
                 "Cantidad: " + cantidad + "\n" +
@@ -74,6 +74,6 @@ public class ProductoClass {
     }
 
     public void mensajeInformativo() {
-        JOptionPane.showMessageDialog(null, mostrarInfo(), "Factura", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, mostrarResultados(), "Factura", JOptionPane.INFORMATION_MESSAGE);
     }
 }
