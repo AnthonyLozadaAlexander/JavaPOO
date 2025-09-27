@@ -41,4 +41,9 @@ public class ProductoClass {
         double iva = (calcularSubtotal() - calcularPorcentajeDescuento()) * IVA;
         return iva;
     }
+
+    public double calcularTotal() {
+        double total = (calcularSubtotal() - calcularPorcentajeDescuento()) + calcularIVA();
+        return total;
+    }
 }
