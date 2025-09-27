@@ -47,15 +47,12 @@ public class ProductoClass {
         return total;
     }
 
-
-    public String toString() {
-        return "ProductoClass{" +
-                "producto='" + producto + '\'' +
-                ", precioUnitario=" + precioUnitario +
-                ", cantidad=" + cantidad +
-                ", precioTotal=" + precioTotal +
-                ", descuento=" + descuento +
-                ", IVA=" + IVA +
-                '}';
+    public String mostrarInfo() {
+        return "Producto='" + producto + "\n" +
+                "PrecioUnitario=" + precioUnitario + "\n" +
+                "Cantidad=" + cantidad + "\n" +
+                "Descuento=" + descuento + "\n" +
+                "IVA=" + IVA + "\n" +
+                "PrecioTotal=" + calcularTotal() + "\n";
     }
 }
