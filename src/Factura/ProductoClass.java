@@ -9,6 +9,26 @@ public class ProductoClass {
     private double descuento;
     private final double IVA = 0.15;
 
+    public String getProducto() {
+        return producto;
+    }
+
+    public double getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public double getDescuento() {
+        return descuento;
+    }
+
+    public double getIVA() {
+        return IVA;
+    }
+
     public void setProducto(String producto) {
         this.producto = producto;
     }
