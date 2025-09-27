@@ -70,6 +70,7 @@ public class ProductoClass {
                 "Cantidad: " + cantidad + "\n" +
                 "Descuento: " + descuento + "\n" +
                 "IVA: " + IVA + "\n" +
+                "Subtotal: " + calcularSubtotal() + "\n" +
                 "PrecioTotal: " + calcularTotal() + "\n";
     }
 
