@@ -32,8 +32,13 @@ public class ProductoClass {
         return precioUnitario * cantidad;
     }
 
-    public double calcularDescuento() {
+    public double calcularPorcentajeDescuento() {
         double descuento = calcularSubtotal() * this.descuento;
         return descuento;
+    }
+
+    public double calcularIVA() {
+        double iva = (calcularSubtotal() - calcularPorcentajeDescuento()) * IVA;
+        return iva;
     }
 }
