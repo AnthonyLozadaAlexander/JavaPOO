@@ -1,5 +1,7 @@
 package Factura;
 
+import javax.swing.*;
+
 public class ProductoClass {
     private String producto;
     private double precioUnitario;
@@ -48,11 +50,15 @@ public class ProductoClass {
     }
 
     public String mostrarInfo() {
-        return "Producto='" + producto + "\n" +
-                "PrecioUnitario=" + precioUnitario + "\n" +
-                "Cantidad=" + cantidad + "\n" +
-                "Descuento=" + descuento + "\n" +
-                "IVA=" + IVA + "\n" +
-                "PrecioTotal=" + calcularTotal() + "\n";
+        return "Producto: " + producto + "\n" +
+                "PrecioUnitario: " + precioUnitario + "\n" +
+                "Cantidad: " + cantidad + "\n" +
+                "Descuento: " + descuento + "\n" +
+                "IVA: " + IVA + "\n" +
+                "PrecioTotal: " + calcularTotal() + "\n";
+    }
+
+    public void mensajeInformativo() {
+        JOptionPane.showMessageDialog(null, mostrarInfo());
     }
 }
