@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq l {space :p:50:p, par l {comp txtProducto:::p:157:p, par l:l {seq l {space :p:24:p, par l {comp label4:::p:110:p, seq l {space :p:7:p, comp label5:::p:97:p}}}, comp txtCantidad::l:p:157:p, par l:t::p {comp label3:::::x, comp txtDescuento:::p:157:p}, comp txtPrecioUnitario::t:p:157:p}, seq l {space :p:24:p, par l:::p {comp btnIngresar:::::x, comp btnLimpiar:::p:115:p}}}}, seq l {space :p:31:p, par l {comp label1:::p::p, seq l {space :p:49:p, comp label2:::p:94:p}}}}, space :::p, comp panel1:::p::p, space :::x}}"
-			"$verticalGroup": "par l {seq l {space :p:25:p, comp label1:::p::p, space :p:28:p, comp label2:::p::p, space :::p, comp txtProducto:::p::p, space s:::p, comp label5:::p::p, space u:::p, comp txtCantidad:::p::p, space :p:15:p, comp label4:::p::p, space :::p, comp txtDescuento:::p::p, space :::p, comp label3:::p::p, space s:::p, comp txtPrecioUnitario:::p::p, space s:::p, comp btnIngresar:::p::p, space s:::p, comp btnLimpiar:::p::p, space :::x}, comp panel1::t:::x}"
+			"$horizontalGroup": "par l {seq {space :p:19:p, par l {seq l {par l {seq l {space :p:31:p, par l {comp txtProducto:::p:157:p, par l:l {seq l {space :p:24:p, par l {comp label4:::p:110:p, seq l {space :p:7:p, comp label5:::p:97:p}}}, comp txtCantidad::l:p:157:p, par l:t::p {comp label3:::::x, comp txtDescuento:::p:157:p}, comp txtPrecioUnitario::t:p:157:p}, seq l {space :p:24:p, par l:::p {comp btnIngresar:::::x, comp btnLimpiar:::p:115:p}}}}, seq l {space :p:61:p, comp label2:::p:94:p}}, space :p:39:p}, comp label1::t:p::p}, space s:::p, comp panel1:::p::p, space ::19:x}}"
+			"$verticalGroup": "par l {comp panel1::t:::x, seq l {space :p:33:p, comp label1:::p::p, space s:::p, comp label2:::p::p, space :::p, comp txtProducto:::p::p, space s:::p, comp label5:::p::p, space u:::p, comp txtCantidad:::p::p, space :p:15:p, comp label4:::p::p, space :::p, comp txtDescuento:::p::p, space :::p, comp label3:::p::p, space s:::p, comp txtPrecioUnitario:::p::p, space s:::p, comp btnIngresar:::p::p, space s:::p, comp btnLimpiar:::p::p, space ::156:x}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -58,8 +58,8 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnLimpiar", true ) )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space ::19:x, par t {comp scrollPane3:::p:715:p, comp tabla:::p:715:p}, space :p:14:p}}"
-				"$verticalGroup": "par l {seq l {space :::x, comp tabla:::p:240:p, space :::p, comp scrollPane3:::p:228:p, space :p:19:p}}"
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp tabla::l:p:613:p, comp scrollPane3::l:p:613:p}, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :p:14:p, comp tabla::::310:x, space :::p, comp scrollPane3:::p:228:p, space :p:16:p}}"
 			} ) {
 				name: "panel1"
 				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -81,7 +81,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 10 )
-			"size": new java.awt.Dimension( 1020, 530 )
+			"size": new java.awt.Dimension( 910, 605 )
 		} )
 	}
 }
