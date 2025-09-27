@@ -70,14 +70,24 @@ public class ProductoIGU extends JFrame {
         txtResultados.setText("");
     }
 
-    private void limpiarTabla() {
+    private void LimpiarTabla() {
         DefaultTableModel model = (DefaultTableModel) tablaProductos.getModel();
         model.setRowCount(0); // Limpiar todas las filas de la tabla
     }
+
     private void btnLimpiar(ActionEvent e) {
         int opcion = JOptionPane.showConfirmDialog(this, "¿Estás seguro de que deseas limpiar los datos?", "Confirmar", JOptionPane.YES_NO_OPTION);
         if (opcion == JOptionPane.YES_OPTION) {
             LimpiarCampos();
+        } else {
+            return;
+        }
+    }
+
+    private void btnLimpiarTabla(ActionEvent e) {
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Estás seguro de que deseas limpiar los datos?", "Confirmar", JOptionPane.YES_NO_OPTION);
+        if (opcion == JOptionPane.YES_OPTION) {
+            LimpiarTabla();
         } else {
             return;
         }
@@ -96,12 +106,13 @@ public class ProductoIGU extends JFrame {
         label5 = new JLabel();
         txtCantidad = new JTextField();
         btnIngresar = new JButton();
-        btnLimpiar = new JButton();
+        btnLimpiarCampos = new JButton();
         panel1 = new JPanel();
         tabla = new JScrollPane();
         tablaProductos = new JTable();
         scrollPane3 = new JScrollPane();
         txtResultados = new JTextPane();
+        btnLimpiarTabla = new JButton();
 
         //======== this ========
         setBackground(Color.white);
@@ -132,20 +143,18 @@ public class ProductoIGU extends JFrame {
         btnIngresar.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 16));
         btnIngresar.addActionListener(e -> btnIngresar(e));
 
-        //---- btnLimpiar ----
-        btnLimpiar.setText("limpiar");
-        btnLimpiar.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 16));
-        btnLimpiar.addActionListener(e -> btnLimpiar(e));
+        //---- btnLimpiarCampos ----
+        btnLimpiarCampos.setText("Limpiar Campos");
+        btnLimpiarCampos.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 16));
+        btnLimpiarCampos.addActionListener(e -> btnLimpiar(e));
 
         //======== panel1 ========
         {
-            panel1.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax
-            . swing. border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn", javax. swing
-            . border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM, new java .awt .
-            Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt. Color. red
-            ) ,panel1. getBorder( )) ); panel1. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override
-            public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062ord\u0065r" .equals (e .getPropertyName (
-            ) )) throw new RuntimeException( ); }} );
+            panel1.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax . swing. border .EmptyBorder (
+            0, 0 ,0 , 0) ,  "JFor\u006dDesi\u0067ner \u0045valu\u0061tion" , javax. swing .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder
+            . BOTTOM, new java. awt .Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 ) ,java . awt. Color .
+            red ) ,panel1. getBorder () ) ); panel1. addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java .
+            beans. PropertyChangeEvent e) { if( "bord\u0065r" .equals ( e. getPropertyName () ) )throw new RuntimeException( ) ;} } );
 
             //======== tabla ========
             {
@@ -182,6 +191,14 @@ public class ProductoIGU extends JFrame {
             );
         }
 
+        //---- btnLimpiarTabla ----
+        btnLimpiarTabla.setText("Limpiar Tabla");
+        btnLimpiarTabla.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 16));
+        btnLimpiarTabla.addActionListener(e -> {
+			btnLimpiar(e);
+			btnLimpiarTabla(e);
+		});
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
@@ -193,7 +210,7 @@ public class ProductoIGU extends JFrame {
                             .addComponent(label1))
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGap(47, 47, 47)
-                            .addGroup(contentPaneLayout.createParallelGroup()
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                 .addComponent(txtProducto, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
                                 .addGroup(contentPaneLayout.createParallelGroup()
                                     .addGroup(contentPaneLayout.createSequentialGroup()
@@ -209,13 +226,13 @@ public class ProductoIGU extends JFrame {
                                         .addComponent(txtDescuento, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
                                     .addComponent(txtPrecioUnitario, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(24, 24, 24)
-                                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(btnIngresar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnLimpiar, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addGap(30, 30, 30)
-                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(24, 24, 24)
+                                    .addComponent(btnIngresar, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnLimpiarCampos, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnLimpiarTabla, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGap(18, 18, 18)
                     .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(19, Short.MAX_VALUE))
@@ -245,8 +262,10 @@ public class ProductoIGU extends JFrame {
                     .addGap(18, 18, 18)
                     .addComponent(btnIngresar)
                     .addGap(18, 18, 18)
-                    .addComponent(btnLimpiar)
-                    .addContainerGap(145, Short.MAX_VALUE))
+                    .addComponent(btnLimpiarCampos)
+                    .addGap(18, 18, 18)
+                    .addComponent(btnLimpiarTabla)
+                    .addContainerGap(102, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -265,11 +284,12 @@ public class ProductoIGU extends JFrame {
     private JLabel label5;
     private JTextField txtCantidad;
     private JButton btnIngresar;
-    private JButton btnLimpiar;
+    private JButton btnLimpiarCampos;
     private JPanel panel1;
     private JScrollPane tabla;
     private JTable tablaProductos;
     private JScrollPane scrollPane3;
     private JTextPane txtResultados;
+    private JButton btnLimpiarTabla;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
