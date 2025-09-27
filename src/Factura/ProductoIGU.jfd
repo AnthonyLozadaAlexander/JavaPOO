@@ -4,13 +4,84 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {space :0:748:x}"
-			"$verticalGroup": "par l {space :0:581:x}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:50:p, par l {comp txtProducto:::p:157:p, par l:l {seq l {space :p:24:p, par l {comp label4:::p:110:p, seq l {space :p:7:p, comp label5:::p:97:p}}}, comp txtCantidad::l:p:157:p, par l:t::p {comp label3:::::x, comp txtDescuento:::p:157:p}, comp txtPrecioUnitario::t:p:157:p}, seq l {space :p:24:p, par l:::p {comp btnIngresar:::::x, comp btnLimpiar:::p:115:p}}}}, seq l {space :p:31:p, par l {comp label1:::p::p, seq l {space :p:49:p, comp label2:::p:94:p}}}}, space :::p, comp panel1:::p::p, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :p:25:p, comp label1:::p::p, space :p:28:p, comp label2:::p::p, space :::p, comp txtProducto:::p::p, space s:::p, comp label5:::p::p, space u:::p, comp txtCantidad:::p::p, space :p:15:p, comp label4:::p::p, space :::p, comp txtDescuento:::p::p, space :::p, comp label3:::p::p, space s:::p, comp txtPrecioUnitario:::p::p, space s:::p, comp btnIngresar:::p::p, space s:::p, comp btnLimpiar:::p::p, space ::79:x}, comp panel1::t::499:x}"
 		} ) {
 			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Factura De Productos"
+				"font": new java.awt.Font( "CaskaydiaMono NF SemiBold", 0, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Producto"
+				"font": &Font0 new java.awt.Font( "CaskaydiaMono NF SemiBold", 0, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Precio Unitario"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Descuento"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtProducto"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtDescuento"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtPrecioUnitario"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Cantidad"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtCantidad"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnIngresar"
+				"text": "Ingresar"
+				"font": &Font1 new java.awt.Font( "CaskaydiaMono NF SemiBold", 0, 16 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnIngresar", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnLimpiar"
+				"text": "limpiar"
+				"font": #Font1
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnLimpiar", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::19:x, par t {comp scrollPane3:::p:715:p, comp tabla:::p:715:p}, space :p:14:p}}"
+				"$verticalGroup": "par l {seq l {space :p:15:p, comp tabla:::p:240:p, space :::x, comp scrollPane3:::p:228:p, space :p:19:p}}"
+			} ) {
+				name: "panel1"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "tabla"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table1"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+							add( new java.util.Vector )
+							add( new java.util.Vector )
+						}, new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane3"
+					add( new FormComponent( "javax.swing.JTextPane" ) {
+						name: "txtResultados"
+					} )
+				} )
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 600, 495 )
+			"location": new java.awt.Point( 0, 10 )
+			"size": new java.awt.Dimension( 1020, 530 )
 		} )
 	}
 }
