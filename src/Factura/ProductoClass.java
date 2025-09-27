@@ -54,6 +54,6 @@ public class ProductoClass {
     }
 
     public void mensajeInformativo() {
-        JOptionPane.showMessageDialog(null, mostrarInfo());
+        JOptionPane.showMessageDialog(null, mostrarInfo(), "Factura", JOptionPane.INFORMATION_MESSAGE);
     }
 }
