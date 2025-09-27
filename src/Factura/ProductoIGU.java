@@ -4,8 +4,11 @@
 
 package Factura;
 
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
+import javax.swing.table.*;
 
 /**
  * @author USUARIO
@@ -22,22 +25,177 @@ public class ProductoIGU extends JFrame {
         setResizable(false);
     }
 
+    private void btnIngresar(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void btnLimpiar(ActionEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - Anthony Lozada Alexander
+        label1 = new JLabel();
+        label2 = new JLabel();
+        label3 = new JLabel();
+        label4 = new JLabel();
+        txtProducto = new JTextField();
+        txtDescuento = new JTextField();
+        txtPrecioUnitario = new JTextField();
+        label5 = new JLabel();
+        txtCantidad = new JTextField();
+        btnIngresar = new JButton();
+        btnLimpiar = new JButton();
+        panel1 = new JPanel();
+        tabla = new JScrollPane();
+        table1 = new JTable();
+        scrollPane3 = new JScrollPane();
+        txtResultados = new JTextPane();
 
         //======== this ========
         var contentPane = getContentPane();
+
+        //---- label1 ----
+        label1.setText("Factura De Productos");
+        label1.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 20));
+
+        //---- label2 ----
+        label2.setText("Producto");
+        label2.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 18));
+
+        //---- label3 ----
+        label3.setText("Precio Unitario");
+        label3.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 18));
+
+        //---- label4 ----
+        label4.setText("Descuento");
+        label4.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 18));
+
+        //---- label5 ----
+        label5.setText("Cantidad");
+        label5.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 18));
+
+        //---- btnIngresar ----
+        btnIngresar.setText("Ingresar");
+        btnIngresar.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 16));
+        btnIngresar.addActionListener(e -> btnIngresar(e));
+
+        //---- btnLimpiar ----
+        btnLimpiar.setText("limpiar");
+        btnLimpiar.setFont(new Font("CaskaydiaMono NF SemiBold", Font.PLAIN, 16));
+        btnLimpiar.addActionListener(e -> btnLimpiar(e));
+
+        //======== panel1 ========
+        {
+            panel1.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing.
+            border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frm\u0044es\u0069gn\u0065r \u0045va\u006cua\u0074io\u006e", javax. swing. border. TitledBorder. CENTER
+            , javax. swing. border. TitledBorder. BOTTOM, new java .awt .Font ("D\u0069al\u006fg" ,java .awt .Font
+            .BOLD ,12 ), java. awt. Color. red) ,panel1. getBorder( )) ); panel1. addPropertyChangeListener (
+            new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062or\u0064er"
+            .equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
+
+            //======== tabla ========
+            {
+
+                //---- table1 ----
+                table1.setModel(new DefaultTableModel(2, 0));
+                tabla.setViewportView(table1);
+            }
+
+            //======== scrollPane3 ========
+            {
+                scrollPane3.setViewportView(txtResultados);
+            }
+
+            GroupLayout panel1Layout = new GroupLayout(panel1);
+            panel1.setLayout(panel1Layout);
+            panel1Layout.setHorizontalGroup(
+                panel1Layout.createParallelGroup()
+                    .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                        .addContainerGap(19, Short.MAX_VALUE)
+                        .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                            .addComponent(scrollPane3, GroupLayout.PREFERRED_SIZE, 715, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tabla, GroupLayout.PREFERRED_SIZE, 715, GroupLayout.PREFERRED_SIZE))
+                        .addGap(14, 14, 14))
+            );
+            panel1Layout.setVerticalGroup(
+                panel1Layout.createParallelGroup()
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(tabla, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(scrollPane3, GroupLayout.PREFERRED_SIZE, 228, GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))
+            );
+        }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGap(0, 748, Short.MAX_VALUE)
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(50, 50, 50)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addComponent(txtProducto, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(contentPaneLayout.createParallelGroup()
+                                    .addGroup(contentPaneLayout.createSequentialGroup()
+                                        .addGap(24, 24, 24)
+                                        .addGroup(contentPaneLayout.createParallelGroup()
+                                            .addComponent(label4, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(contentPaneLayout.createSequentialGroup()
+                                                .addGap(7, 7, 7)
+                                                .addComponent(label5, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtCantidad, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(label3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtDescuento, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtPrecioUnitario, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(24, 24, 24)
+                                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(btnIngresar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnLimpiar, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(31, 31, 31)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addComponent(label1)
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(49, 49, 49)
+                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)))))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGap(0, 581, Short.MAX_VALUE)
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(25, 25, 25)
+                    .addComponent(label1)
+                    .addGap(28, 28, 28)
+                    .addComponent(label2)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(txtProducto, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(label5)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(txtCantidad, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15)
+                    .addComponent(label4)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(txtDescuento, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(label3)
+                    .addGap(18, 18, 18)
+                    .addComponent(txtPrecioUnitario, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(btnIngresar)
+                    .addGap(18, 18, 18)
+                    .addComponent(btnLimpiar)
+                    .addContainerGap(79, Short.MAX_VALUE))
+                .addComponent(panel1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -46,5 +204,21 @@ public class ProductoIGU extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - Anthony Lozada Alexander
+    private JLabel label1;
+    private JLabel label2;
+    private JLabel label3;
+    private JLabel label4;
+    private JTextField txtProducto;
+    private JTextField txtDescuento;
+    private JTextField txtPrecioUnitario;
+    private JLabel label5;
+    private JTextField txtCantidad;
+    private JButton btnIngresar;
+    private JButton btnLimpiar;
+    private JPanel panel1;
+    private JScrollPane tabla;
+    private JTable table1;
+    private JScrollPane scrollPane3;
+    private JTextPane txtResultados;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
