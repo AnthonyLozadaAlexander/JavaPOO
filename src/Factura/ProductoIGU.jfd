@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq {space :p:19:p, comp label1:::p::p}, seq l {space :p:47:p, par l {comp txtProducto:::p:157:p, par l:l {seq l {space :p:24:p, par l {comp label4:::p:110:p, seq l {space :p:7:p, comp label5:::p:97:p}}}, comp txtCantidad::l:p:157:p, par l:t::p {comp label3:::::x, comp txtDescuento:::p:157:p}, comp txtPrecioUnitario::t:p:157:p}, seq l {space :p:24:p, par l:::p {comp btnIngresar:::::x, comp btnLimpiar:::p:115:p}}, seq l {space :p:30:p, comp label2:::p:94:p}}}}, space s:::p, comp panel1:::p::p, space ::19:x}}"
-			"$verticalGroup": "par l {comp panel1::t:::x, seq l {space :p:33:p, comp label1:::p::p, space :p:29:p, comp label2:::p::p, space :::p, comp txtProducto:::p::p, space s:::p, comp label5:::p::p, space u:::p, comp txtCantidad:::p::p, space :p:15:p, comp label4:::p::p, space :::p, comp txtDescuento:::p::p, space :::p, comp label3:::p::p, space s:::p, comp txtPrecioUnitario:::p::p, space s:::p, comp btnIngresar:::p::p, space s:::p, comp btnLimpiar:::p::p, space ::145:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:19:p, comp label1:::p::p}, seq l {space :p:47:p, par l:::p {comp txtProducto:::p:157:p, par l:l {seq l {space :p:24:p, par l {comp label4:::p:110:p, seq l {space :p:7:p, comp label5:::p:97:p}}}, comp txtCantidad::l:p:157:p, par l:t::p {comp label3:::::x, comp txtDescuento:::p:157:p}, comp txtPrecioUnitario::t:p:157:p}, seq l {space :p:30:p, comp label2:::p:94:p}, seq l {space :p:24:p, comp btnIngresar:::p:115:p}, comp btnLimpiarCampos::t:::x, comp btnLimpiarTabla::t:::x}}}, space s:::p, comp panel1:::p::p, space ::19:x}}"
+			"$verticalGroup": "par l {comp panel1::t:::x, seq l {space :p:33:p, comp label1:::p::p, space :p:29:p, comp label2:::p::p, space :::p, comp txtProducto:::p::p, space s:::p, comp label5:::p::p, space u:::p, comp txtCantidad:::p::p, space :p:15:p, comp label4:::p::p, space :::p, comp txtDescuento:::p::p, space :::p, comp label3:::p::p, space s:::p, comp txtPrecioUnitario:::p::p, space s:::p, comp btnIngresar:::p::p, space s:::p, comp btnLimpiarCampos:::p::p, space s:::p, comp btnLimpiarTabla:::p::p, space ::102:x}}"
 		} ) {
 			name: "this"
 			"background": new java.awt.Color( 255, 255, 255, 255 )
@@ -53,8 +53,8 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnIngresar", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "btnLimpiar"
-				"text": "limpiar"
+				name: "btnLimpiarCampos"
+				"text": "Limpiar Campos"
 				"font": #Font1
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnLimpiar", true ) )
 			} )
@@ -79,6 +79,13 @@ new FormModel {
 						name: "txtResultados"
 					} )
 				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnLimpiarTabla"
+				"text": "Limpiar Tabla"
+				"font": #Font1
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnLimpiar", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnLimpiarTabla", true ) )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 10 )
