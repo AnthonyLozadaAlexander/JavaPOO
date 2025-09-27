@@ -23,10 +23,21 @@ public class ProductoIGU extends JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
+        String[] columns = {"Producto", "Cantidad", "Descuento", "Precio Unitario", "Subtotal", "IVA", "Total"};
+        DefaultTableModel model = new DefaultTableModel(columns, 0);
+        tablaProductos.setModel(model);
     }
 
     private void btnIngresar(ActionEvent e) {
-
+        String producto = txtProducto.getText();
+        int cantidad = Integer.parseInt(txtCantidad.getText());
+        double descuento = Double.parseDouble(txtDescuento.getText());
+        double precioUnitario = Double.parseDouble(txtPrecioUnitario.getText());
+        ProductoClass Producto = new ProductoClass();
+        Producto.setProducto(producto);
+        Producto.setCantidad(cantidad);
+        Producto.setDescuento(descuento);
+        Producto.setPrecioUnitario(precioUnitario);
     }
 
     private void btnLimpiar(ActionEvent e) {
@@ -49,7 +60,7 @@ public class ProductoIGU extends JFrame {
         btnLimpiar = new JButton();
         panel1 = new JPanel();
         tabla = new JScrollPane();
-        table1 = new JTable();
+        tablaProductos = new JTable();
         scrollPane3 = new JScrollPane();
         txtResultados = new JTextPane();
 
@@ -88,19 +99,19 @@ public class ProductoIGU extends JFrame {
 
         //======== panel1 ========
         {
-            panel1.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing.
-            border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frm\u0044es\u0069gn\u0065r \u0045va\u006cua\u0074io\u006e", javax. swing. border. TitledBorder. CENTER
-            , javax. swing. border. TitledBorder. BOTTOM, new java .awt .Font ("D\u0069al\u006fg" ,java .awt .Font
-            .BOLD ,12 ), java. awt. Color. red) ,panel1. getBorder( )) ); panel1. addPropertyChangeListener (
-            new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062or\u0064er"
-            .equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
+            panel1.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax . swing.
+            border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JFor\u006dDesi\u0067ner \u0045valu\u0061tion" , javax. swing .border . TitledBorder. CENTER
+            ,javax . swing. border .TitledBorder . BOTTOM, new java. awt .Font ( "Dia\u006cog", java .awt . Font
+            . BOLD ,12 ) ,java . awt. Color .red ) ,panel1. getBorder () ) ); panel1. addPropertyChangeListener(
+            new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e) { if( "bord\u0065r"
+            .equals ( e. getPropertyName () ) )throw new RuntimeException( ) ;} } );
 
             //======== tabla ========
             {
 
-                //---- table1 ----
-                table1.setModel(new DefaultTableModel(2, 0));
-                tabla.setViewportView(table1);
+                //---- tablaProductos ----
+                tablaProductos.setModel(new DefaultTableModel(2, 0));
+                tabla.setViewportView(tablaProductos);
             }
 
             //======== scrollPane3 ========
@@ -122,9 +133,9 @@ public class ProductoIGU extends JFrame {
             panel1Layout.setVerticalGroup(
                 panel1Layout.createParallelGroup()
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(tabla, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scrollPane3, GroupLayout.PREFERRED_SIZE, 228, GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))
             );
@@ -194,8 +205,8 @@ public class ProductoIGU extends JFrame {
                     .addComponent(btnIngresar)
                     .addGap(18, 18, 18)
                     .addComponent(btnLimpiar)
-                    .addContainerGap(79, Short.MAX_VALUE))
-                .addComponent(panel1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -217,7 +228,7 @@ public class ProductoIGU extends JFrame {
     private JButton btnLimpiar;
     private JPanel panel1;
     private JScrollPane tabla;
-    private JTable table1;
+    private JTable tablaProductos;
     private JScrollPane scrollPane3;
     private JTextPane txtResultados;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
