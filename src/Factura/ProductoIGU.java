@@ -35,6 +35,7 @@ public class ProductoIGU extends JFrame {
         double precioUnitario = Double.parseDouble(txtPrecioUnitario.getText());
 
         ProductoClass Producto = new ProductoClass();
+
         Producto.setProducto(producto);
         Producto.setCantidad(cantidad);
         Producto.setDescuento(descuento);
@@ -92,6 +93,7 @@ public class ProductoIGU extends JFrame {
         txtResultados = new JTextPane();
 
         //======== this ========
+        setBackground(Color.white);
         var contentPane = getContentPane();
 
         //---- label1 ----
@@ -126,14 +128,13 @@ public class ProductoIGU extends JFrame {
 
         //======== panel1 ========
         {
-            panel1.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder (
-            new javax . swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JFor\u006dDesi\u0067ner \u0045valu\u0061tion"
-            , javax. swing .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM
-            , new java. awt .Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 )
-            ,java . awt. Color .red ) ,panel1. getBorder () ) ); panel1. addPropertyChangeListener(
-            new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e
-            ) { if( "bord\u0065r" .equals ( e. getPropertyName () ) )throw new RuntimeException( )
-            ;} } );
+            panel1.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax
+            . swing. border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn", javax. swing
+            . border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM, new java .awt .
+            Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt. Color. red
+            ) ,panel1. getBorder( )) ); panel1. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override
+            public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062ord\u0065r" .equals (e .getPropertyName (
+            ) )) throw new RuntimeException( ); }} );
 
             //======== tabla ========
             {
@@ -175,37 +176,35 @@ public class ProductoIGU extends JFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(19, 19, 19)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(19, 19, 19)
+                            .addComponent(label1))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(47, 47, 47)
                             .addGroup(contentPaneLayout.createParallelGroup()
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(31, 31, 31)
-                                    .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(txtProducto, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtProducto, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(contentPaneLayout.createParallelGroup()
+                                    .addGroup(contentPaneLayout.createSequentialGroup()
+                                        .addGap(24, 24, 24)
                                         .addGroup(contentPaneLayout.createParallelGroup()
+                                            .addComponent(label4, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
                                             .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(24, 24, 24)
-                                                .addGroup(contentPaneLayout.createParallelGroup()
-                                                    .addComponent(label4, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(contentPaneLayout.createSequentialGroup()
-                                                        .addGap(7, 7, 7)
-                                                        .addComponent(label5, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE))))
-                                            .addComponent(txtCantidad, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(label3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(txtDescuento, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(txtPrecioUnitario, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                            .addGap(24, 24, 24)
-                                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(btnIngresar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(btnLimpiar, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)))))
+                                                .addGap(7, 7, 7)
+                                                .addComponent(label5, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtCantidad, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(label3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtDescuento, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtPrecioUnitario, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(61, 61, 61)
-                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)))
-                            .addGap(39, 39, 39))
-                        .addComponent(label1, GroupLayout.Alignment.TRAILING))
+                                    .addGap(24, 24, 24)
+                                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(btnIngresar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnLimpiar, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(30, 30, 30)
+                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)))))
                     .addGap(18, 18, 18)
                     .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(19, Short.MAX_VALUE))
@@ -216,7 +215,7 @@ public class ProductoIGU extends JFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGap(33, 33, 33)
                     .addComponent(label1)
-                    .addGap(18, 18, 18)
+                    .addGap(29, 29, 29)
                     .addComponent(label2)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(txtProducto, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -236,7 +235,7 @@ public class ProductoIGU extends JFrame {
                     .addComponent(btnIngresar)
                     .addGap(18, 18, 18)
                     .addComponent(btnLimpiar)
-                    .addContainerGap(156, Short.MAX_VALUE))
+                    .addContainerGap(145, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
